@@ -48,6 +48,22 @@ const cardArray = [
     {
         name: 'red-polka',
         img: 'images/red-polka-on-white.png'
+    },
+    {
+        name: 'yellow-diag',
+        img: 'images/yellow-black-diagonal-stripes.png'
+    },
+    {
+        name: 'yellow-diag',
+        img: 'images/yellow-black-diagonal-stripes.png'
+    },
+    {
+        name: 'yellow-three',
+        img: 'images/yellow-black-three-domino.png'
+    },
+    {
+        name: 'yellow-three',
+        img: 'images/yellow-black-three-domino.png'
     }
 ]
 
@@ -100,6 +116,7 @@ function checkForMatch() {
     resultDisplay.textContent = `Matches Made: ${cardsWon.length}`;
     if (cardsWon.length === cardArray.length/2) {
         resultDisplay.textContent = 'Congratulations! You found them all!';
+        alertDisplay.textContent = '--';
     }
 }
 
@@ -111,7 +128,7 @@ function flipcard() {
     cardsChosenId.push(cardId);
     this.setAttribute('src', cardArray[cardId].img);
     if (cardsChosen.length === 2) {
-        setTimeout(checkForMatch, 500);
+        setTimeout(checkForMatch, 400);
     }
 }
 
@@ -120,4 +137,6 @@ createBoard();
 
 // credit to Ania Kobow for the YouTube tutorial on the code for this game. I designed all the cards and card backs myself in Adobe Illustrator and changed the styling of the webpage to make it my own.
 
-// I also changed from using pop-up alerts to using textContent to display the messages directly on the page
+// I also changed from using pop-up alerts to using textContent to display the messages directly on the page.
+
+// In addition, I added extra cards that make up a fourth row.
