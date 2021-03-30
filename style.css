@@ -23,7 +23,9 @@ h1 {
 
 button {
     border-radius: 5px;
-    padding: 5px;
+    padding: 5px 20px;
+    font-weight: bold;
+    font-size: 1em;
 }
 
 @media only screen and (max-width: 500px) {
