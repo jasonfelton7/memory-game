@@ -1,0 +1,22 @@
+body {
+    margin: 0, auto;
+    background-color: darkgrey;
+    text-align: center;
+    font-family: orbitron;
+}
+
+h1 {
+    margin-top: 2%;
+    font-size: 4em;
+}
+
+.grid {
+    position: fixed;
+    left: 50%;
+    margin-left: -200px;
+    margin-top: 1%;
+    display: flex;
+    flex-wrap: wrap;
+    width: 400px;
+    height: 300px;
+}
