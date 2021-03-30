@@ -72,6 +72,7 @@ cardArray.sort(() => 0.5 - Math.random());
 const grid = document.querySelector('.grid');
 const resultDisplay = document.querySelector('#result');
 const alertDisplay = document.querySelector('#alerts');
+const resetButton = document.querySelector('#reset');
 let cardsChosen = [];
 let cardsChosenId = [];
 let cardsWon = [];
@@ -131,12 +132,16 @@ function flipcard() {
         setTimeout(checkForMatch, 400);
     }
 }
+resetButton.addEventListener('click', restart);
+function restart() {
+    document.location.href = '';
+}
 
 createBoard();
 })
 
-// credit to Ania Kobow for the YouTube tutorial on the code for this game. I designed all the cards and card backs myself in Adobe Illustrator and changed the styling of the webpage to make it my own.
+// credit to Ania Kobow for the YouTube tutorial on the code for this game. I designed all the cards and card backs myself in Adobe Illustrator and changed the styling of the webpage to improve the look.
 
 // I also changed from using pop-up alerts to using textContent to display the messages directly on the page.
 
-// In addition, I added extra cards that make up a fourth row.
+// In addition, I added extra cards that make up a fourth row and added a reset button.
