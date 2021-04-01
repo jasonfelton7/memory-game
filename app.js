@@ -116,7 +116,9 @@ function checkForMatch() {
     cardsChosenId = [];
     resultDisplay.textContent = `Matches Made: ${cardsWon.length}`;
     if (cardsWon.length === cardArray.length/2) {
-        resultDisplay.textContent = 'Congratulations! You found them all!';
+        clearInterval(interval);
+        let finalTime = timer.innerHTML;
+        resultDisplay.textContent = `Congratulations! You found them all in: ${finalTime}!`;
         alertDisplay.textContent = '--';
     }
 }
@@ -136,8 +138,31 @@ resetButton.addEventListener('click', restart);
 function restart() {
     document.location.href = '';
 }
+    
+// game timer
+let second = 0;
+let minute = 0;
+let timer = document.querySelector('.timer');
+
+let interval;
+
+function startTimer() {
+    interval = setInterval(function() {
+        timer.innerHTML = minute + "mins " + second + "secs";
+        second++;
+        if(second === 60) {
+            minute++;
+            second = 0;
+        }
+        if(minute === 60) {
+            hour++;
+            minute = 0;
+        }
+    }, 1000)
+}
 
 createBoard();
+startTimer();
 })
 
 // credit to Ania Kobow for the YouTube tutorial on the code for this game. I designed all the cards and card backs myself in Adobe Illustrator and changed the styling of the webpage to improve the look.
