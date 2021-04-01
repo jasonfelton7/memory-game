@@ -5,4 +5,4 @@ credit to Ania Kobow for the YouTube tutorial on the code for this game. I desig
 
 I also changed from using pop-up alerts to using textContent to display the messages directly on the page.
 
-In addition, I added extra cards that make up a fourth row and added a reset button to start the game over without reloading the page manually.
+In addition, I added extra cards that make up a fourth row and added a reset button and a game timer.
