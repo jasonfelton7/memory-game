@@ -119,7 +119,7 @@ function checkForMatch() {
         clearInterval(interval);
         let finalTime = timer.innerHTML;
         resultDisplay.textContent = `Congratulations! You found them all in: ${finalTime}!`;
-        alertDisplay.textContent = '--';
+        alertDisplay.textContent = '';
     }
 }
 
